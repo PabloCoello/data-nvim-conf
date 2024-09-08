@@ -15,6 +15,10 @@ return {
       -- Save localoptions to session file
       vim.opt.sessionoptions:append 'localoptions'
       require('projections').setup {
+        workspaces = {
+          { "~/projects/", { ".git" } },
+          { "/mnt/c/Users/Pablo Coello/Proyectos/", { ".git" } }
+        },
         store_hooks = {
           pre = function()
             -- nvim-tree
