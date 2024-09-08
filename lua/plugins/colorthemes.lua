@@ -3,6 +3,23 @@ return {
   { 'folke/tokyonight.nvim', enabled = false, lazy = false, priority = 1000 },
   { 'EdenEast/nightfox.nvim', enabled = false, lazy = false, priority = 1000 },
   {
+    'cpea2506/one_monokai.nvim',
+    enabled = false,
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      require('one_monokai').setup({
+        colors = {
+          red = '#E27056',
+          yellow = '#E5B15D',
+          green = '#58B69D',
+          cyan = '#4F80DD'
+        },
+      })
+      vim.cmd.colorscheme 'one_monokai'
+    end,
+  },
+  {
     'catppuccin/nvim',
     name = 'catppuccin',
     enabled = false,
