@@ -11,6 +11,18 @@ return {
   },
 
   {
+    'dcoello-dev/sandbox.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+      'akinsho/toggleterm.nvim',
+      'ellisonleao/glow.nvim',
+    },
+    config = function()
+      require("sandbox").setup({"~/sandbox-notes"})
+    end,
+  },
+
+  {
     'jakewvincent/mkdnflow.nvim',
     enabled = false,
     config = function()
